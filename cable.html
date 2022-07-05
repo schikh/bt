@@ -1,5 +1,6 @@
 <html>
   <body>
+  <h1>Calcul des forces sur un câble</h1>
 <table id="values">
 	<tr>
   <td>portée (m)</td>                     <td><input type="number" onchange="recalc()" min="0" max="999"   step="1"        value="50"/></td>
@@ -34,15 +35,13 @@
 		color: white;
 		background-color: #15222e;
 	}
-
-	table,
-	td {
+	table, td {
 		border-collapse: collapse;
 		border: 1px solid gray;
 	}
-  input[type='number']{
-    width: 80px;
-  }
+    input[type='number']{
+        width: 80px;
+    }
 </style>
 <script>
 
@@ -391,7 +390,7 @@ function calculate(values) {
 
   logValue('tableau de pose');
   logValue('=======================');
-  logValue('T°', `taux de traction à ${criticalTemperature}°`, 'taux de traction à T°', 'hauteur', 'taux de traction minimale à T°', 'hauteur minimale');
+  logValue('T°', `taux de traction à ${criticalTemperature}°`, 'taux de traction à T°', 'hauteur', 'taux de traction minimale pour H > 6m à T°', 'hauteur minimale');
   for (var t = -20; t <= 40; t += 5) {
 
     const d = getTractionForce(values.tauxTractionMax, values.moduleElasticite,
