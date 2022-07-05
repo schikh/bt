@@ -1,0 +1,272 @@
+<html>
+  <body>
+
+    <table id="values">
+      <tr>
+        <td>#</td>
+        <td>portée (m)</td>
+        <td>hauteur poteau hors sol (m)</td>
+        <td>hauteur ancrage (m)</td>
+        <td>angle (°)</td>
+        <td>diameter (mm)</td>
+        <td>section (mm²)</td>
+        <td>tension (kg/mm²)</td>
+        <td>coefficient de trainée</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="50"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="99"  step="0.1"    value="8.40"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="9"   step="0.1"    value="0.20"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="45"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="54.6"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="11"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.01"   value="1.45"/></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="50"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="99"  step="0.1"    value="8.40"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="9"   step="0.1"    value="0.20"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="118"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="45"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="54.6"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="11"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.01"   value="1.45"/></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      step="0.1" value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="99"  step="0.1"    value="8.40"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="9"   step="0.1"    value="0.20"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="45"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="54.6"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="11"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.01"   value="1.45"/></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      step="0.1" value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="99"  step="0.1"    value="8.40"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="9"   step="0.1"    value="0.20"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="45"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="54.6"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="11"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.01"   value="1.45"/></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      step="0.1" value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="99"  step="0.1"    value="8.40"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="9"   step="0.1"    value="0.20"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="0"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="45"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.1"    value="54.6"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="1"      value="11"/></td>
+        <td><input type="number" onchange="recalc()" min="-999" max="999" step="0.01"   value="1.45"/></td>
+      </tr>
+    </table>
+    <br/>
+    <div id='tab'></div>
+    <style>
+      body {
+        font-family: 'Segoe UI';
+        color: white;
+        background-color: #15222e;
+      }
+    
+      table,
+      td {
+        border-collapse: collapse;
+        border: 1px solid gray;
+      }
+    </style>
+    
+<script>
+    var tbl;
+    
+    function addRow(tbdy, values) {
+      var tr = document.createElement('tr');
+      for (var j = 0; j < values.length; j++) {
+        addCell(tr, values[j]);
+      }
+      tbdy.appendChild(tr);
+      return tr;
+    }
+    
+    function addCell(tr, value) {
+      var td = document.createElement('td');
+      if (typeof value === 'number') {
+        if (value !== Math.floor(value)) {
+          value = value.toFixed(2);
+        }
+      }
+      else if (value === undefined || value === null) {
+        value = '';
+      }
+      td.appendChild(document.createTextNode(value));
+      tr.appendChild(td);
+      return td;
+    }
+    
+    function tableCreate() {
+      var tbl = document.createElement('table');
+      tbl.setAttribute('class', 'horraire border');
+      tbl.setAttribute('id', 'tab');
+      return tbl;
+    }
+    
+    function logHeader(...x) {
+      addRow(tbl, x);
+    }
+    
+    function logValue(...x) {
+      addRow(tbl, ['', ...x]);
+    }
+    
+    function logVector(header, v) {
+      addRow(tbl, ['', header, v.length, v.angle]);
+    }
+    
+    function clear() {
+      var container = document.getElementById('tab');
+      container.innerHTML = '';
+      tbl = tableCreate();
+      container.appendChild(tbl);
+    }
+    
+    function getFieldValue(name) {
+      return document.getElementById(name).value;
+    }
+    
+    function getPortees() {
+      var el = document.getElementById('values');
+      var nodes = el.children[0].querySelectorAll('input[type="number"]');
+      var values = Array.prototype.slice.call(nodes).map(x => parseFloat(x.value));
+      var portees = [];
+      for (var i = 0; i < values.length; i += 8) {
+        if (values[i + 0] > 0) {
+          portees.push(new Portee(values[i + 0], values[i + 1], values[i + 2], values[i + 3], values[i + 4], values[i + 5], values[i + 6], values[i + 7]));
+        }
+      }
+      return portees;
+    }
+    
+    //==================================================================================
+    class Portee {
+      constructor(length, hauteur, ancrage, angle, diameter, section, tension, coeffTrainee) {
+        this.length = length;
+        this.hauteur = hauteur;
+        this.ancrage = ancrage;
+        this.angle = angle;
+        this.diameter = diameter;
+        this.section = section;
+        this.tension = tension;
+        this.coeffTrainee = coeffTrainee;
+      }
+    
+      getWindForceVector(Q) {
+        // calcul de l'effort du vent en conditions été et hiver.
+        // F = C x Q x A     (kg/m²)
+        // C = coëfficient de traînée.
+        // A = Surface frappée par le vent (m²).
+        // Q = Pression dynamique (kg/m²).
+        const coeffEte = this.length > 100 ? 0.5 : 0.7;
+        //const coeffHiver = 0.25;
+        var forceVentEte = this.coeffTrainee * this.length * this.diameter/1000 * Q * coeffEte * (this.hauteur - this.ancrage) / this.hauteur;
+        //var forceVentHiver = coeffTrainee * this.diameter * Q * coeffHiver;
+        return Vector.from(forceVentEte, this.angle + 90); // We take summer wind force
+      }
+    
+      getTensionForceVector() {
+        return Vector.from(this.section * this.tension * (this.hauteur - this.ancrage) / this.hauteur, this.angle);
+      }
+    }
+    
+    class Vector {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+      static from(len, alpha) {
+        var angle = alpha / 180 * Math.PI;
+        return new Vector(len * Math.cos(angle), len * Math.sin(angle));
+      }
+      add(v) {
+        return new Vector(this.x + v.x, this.y + v.y);
+      }
+      multiply(f) {
+        return new Vector(this.x * f, this.y * f);
+      }
+      combine(v) {
+        v = (Math.abs(this.angle - v.angle) % 180) < 90 ? v : v.multiply(-1);
+        return this.add(v);
+      }
+      get length() {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+      }
+      get angle() {
+        if (this.x == 0) {
+          return this.y > 0 ? 90 : -90;
+        }
+        var correction = this.x > 0 ? 0 : 180;
+        return Math.atan(this.y / this.x) / Math.PI * 180 + correction;
+      }
+      toString() {
+        return `${this.length.toFixed(2)} à ${this.angle.toFixed(2)}°`;
+      }
+    }
+    
+    function dynamiquePression(poidsSpecifiqueAir, vitesseVent, g) {
+      // calcul de  la pression dynamique
+      // Q = (a x v²) : 2 g
+      // a = Poids Spécifique de l//air
+      // v = Vitesse du vent (m/s)
+      // g = Accélération de la pesanteur (m/s²)
+      return poidsSpecifiqueAir * vitesseVent * vitesseVent / (2 * g);
+    }
+    
+    function recalc() {
+      clear();
+      calculate();
+    }
+    
+    function calculate() {
+      var g = 9.81;
+      var poidsSpecifiqueAir = 1.225;
+      var vitesseVent = 34.64;
+    
+      const Q = dynamiquePression(poidsSpecifiqueAir, vitesseVent, g);
+    
+      var portees = getPortees();
+    
+      var windForces = portees.map(p => p.getWindForceVector(Q).multiply(0.5));
+      var totalwindForce = windForces.reduce((a, v) => a.combine(v), new Vector(0, 0));
+    
+      var tensionForces = portees.map(p => p.getTensionForceVector());
+      var totalTensionForce = tensionForces.reduce((a, p) => a.add(p));
+    
+      var totalForce = totalTensionForce.add(totalwindForce);
+    
+      logHeader('force vent');
+      logValue('#', 'intensitée (kg)', 'angle (°)');
+      windForces.forEach((f, i) => logVector(i + 1, f));
+      logVector('total', totalwindForce);
+    
+      logHeader('force tension');
+      logValue('#', 'intensitée (kg)', 'angle (°)');
+      tensionForces.forEach((f, i) => logVector(i + 1, f));
+      logVector('total', totalTensionForce);
+    
+      logHeader('force tension + vent');
+      logValue('#', 'intensitée (kg)', 'angle (°)');
+      logVector('résultante', totalForce);
+    }
+    
+    recalc();    
+</script>
+</body>
+</html>
